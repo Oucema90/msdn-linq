@@ -27,5 +27,18 @@ namespace msdn_linq_samples.LINQ
             var products = Class1.GetProductList();
             return products.Select(x => x).Where(x => x.UnitStock > 0 && x.UnitPrice > 3.00M);
         }
+
+        public static IEnumerable<Customer> Simple4()
+        {
+            var customers = Class1.GetCustomersList();
+            return customers.Select(c => c).Where(c => c.Region == "WA");
+        }
+
+        public static IEnumerable<string> Sample5()
+        {
+            string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+
+            return digits.Where((digit, index) => digit.Length < index);
+        }
     }
 }
