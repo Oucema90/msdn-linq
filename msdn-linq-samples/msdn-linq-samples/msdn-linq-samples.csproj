@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Entity\Customer.cs" />
+    <Compile Include="Entity\Order.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="LINQ\RestrictionOperators.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
