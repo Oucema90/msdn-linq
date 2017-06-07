@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using msdn_linq_samples.Entity;
 
-namespace msdn_linq_samples
+namespace msdn_linq_samples.Utils
 {
-    public class Class1
+    public class RestrictionOperatorsUtils
     {
         public static IEnumerable<Product> GetProductList()
         {
