@@ -1,5 +1,6 @@
 ﻿using System;
 using msdn_linq_samples.LINQ;
+using msdn_linq_samples.Utils;
 
 namespace msdn_linq_samples
 {
@@ -15,27 +16,34 @@ namespace msdn_linq_samples
             {
                 restrictionOperators.DisplayMenu();
                 cki = Console.ReadKey(false);
+                
                 switch (cki.KeyChar.ToString())
                 {
                     case "1":
-                        restrictionOperators.Simple1();
+                        Console.WriteLine("Numbers < 5:");
+                        RestrictionOperatorsUtils.DisplayInts(restrictionOperators.Simple1());
                         break;
                     case "2":
-                        restrictionOperators.Simple2();
+                        Console.WriteLine("Sold out products:");
+                        RestrictionOperatorsUtils.DisplayProducts(restrictionOperators.Simple2(), cki.KeyChar.ToString());
                         break;
                     case "3":
-                        restrictionOperators.Simple1();
+                        Console.WriteLine("In-stock products that cost more than 3.00:");
+                        RestrictionOperatorsUtils.DisplayProducts(restrictionOperators.Simple3(), cki.KeyChar.ToString());
                         break;
                     case "4":
-                        restrictionOperators.Simple2();
+                        Console.WriteLine("Customers from Washington and their orders:");
+                        RestrictionOperatorsUtils.DisplayCustomers(restrictionOperators.Simple4());
                         break;
                     case "5":
-                        restrictionOperators.Simple1();
+                        Console.WriteLine("Short digits:");
+                        RestrictionOperatorsUtils.DisplayStrings(restrictionOperators.Simple5());
                         break;
                     default:
                         Console.WriteLine("No such choice in the list\n");
                         break;
                 }
+
             } while (cki.Key != ConsoleKey.Escape);
         }
 

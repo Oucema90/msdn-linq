@@ -52,7 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="RestrictionOperatorsTests\Sample1Tests.cs" />
+    <Compile Include="RestrictionOperatorsTests\RestrictionOperatorsTests.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

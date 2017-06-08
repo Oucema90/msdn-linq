@@ -33,19 +33,19 @@ namespace msdn_linq_samples.Utils
                     return new List<Order>()
                     {
                         new Order(10482, new DateTime(1997, 3, 21, 12, 0, 0)),
-                        new Order(10545, new DateTime(1997, 22, 5, 12, 0, 0))
+                        new Order(10545, new DateTime(1997, 5, 22, 12, 0, 0))
                     };
                 case 2:
                     return new List<Order>()
                     {
                         new Order(10574, new DateTime(1997, 6, 19, 12, 0, 0)),
-                        new Order(10545, new DateTime(1997, 23, 6, 12, 0, 0))
+                        new Order(10545, new DateTime(1997, 6, 23, 12, 0, 0))
                     };
                 case 3:
                     return new List<Order>()
                     {
                         new Order(10269, new DateTime(1998, 8, 1, 12, 0, 0)),
-                        new Order(10545, new DateTime(1996, 31, 7, 12, 0, 0))
+                        new Order(10545, new DateTime(1996, 7, 31, 12, 0, 0))
                     };
                 case 4:
                     return new List<Order>()
@@ -69,6 +69,47 @@ namespace msdn_linq_samples.Utils
                 new Customer(5,"Baguette","PA",GetOrderList(5).ToList()),
                 new Customer(6,"Meublatex","TU",GetOrderList(6).ToList()),
             };
+        }
+
+        public static void DisplayInts(IEnumerable<int> ints)
+        {
+            foreach (var element in ints) Console.WriteLine(element);
+        }
+
+        public static void DisplayProducts(IEnumerable<Product> products, string sample)
+        {
+            switch (sample)
+            {
+                case "2":
+                    foreach (var product in products) Console.WriteLine("{0} is sold out!", product.Name);
+                    break;
+                case "3":
+                    foreach (var product in products) Console.WriteLine("{0} is in stock and costs more than 3.00.", product.Name);
+                    break;
+                default:
+                    Console.WriteLine("The sample {0} isns't a product sample",sample);
+                    break;
+            }          
+        }
+
+        public static void DisplayCustomers(IEnumerable<Customer> customers)
+        {
+            foreach (var customer in customers)
+            {
+                Console.WriteLine("Customer {0}: {1}", customer.Id, customer.CompanyName);
+                foreach (var order in customer.Orders)
+                {
+                    Console.WriteLine("  Order {0}: {1}", order.Id, order.Date);
+                }
+            }
+        }
+
+        public static void DisplayStrings(IEnumerable<string> strings)
+        {
+            foreach (var d in strings)
+            {
+                Console.WriteLine("The word {0} is shorter than its value.", d);
+            }
         }
     }
 }
