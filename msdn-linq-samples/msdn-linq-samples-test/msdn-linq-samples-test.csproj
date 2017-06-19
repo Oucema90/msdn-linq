@@ -53,8 +53,13 @@
   </Choose>
   <ItemGroup>
     <Compile Include="RestrictionOperatorsTests\RestrictionOperatorsTests.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\msdn-linq-samples\msdn-linq-samples.csproj">
+      <Project>{f1fefaca-8101-423a-929f-91dab1a03827}</Project>
+      <Name>msdn-linq-samples</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
