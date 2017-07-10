@@ -4,7 +4,7 @@ namespace msdn_linq_samples.Entity
 {
     public class Customer
     {
-        public long Id;
+        public long CustomerId;
 
         public string CompanyName;
 
@@ -12,9 +12,9 @@ namespace msdn_linq_samples.Entity
 
         public string Region;
 
-        public Customer(long id,string companyName, string region, List<Order> orders)
+        public Customer(long customerId, string companyName, string region, List<Order> orders)
         {
-            Id = id;
+            CustomerId = customerId;
             CompanyName = companyName;
             Region = region;
             Orders = orders;
