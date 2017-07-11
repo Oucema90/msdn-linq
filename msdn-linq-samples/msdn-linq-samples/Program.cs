@@ -11,6 +11,7 @@ namespace msdn_linq_samples
             Console.WriteLine("Program");
             Console.WriteLine();
             Console.WriteLine("1. Restriction Operators");
+            Console.WriteLine("2. Projections Operators");
             Console.WriteLine("Esc. Exit");
         }
 
@@ -35,10 +36,13 @@ namespace msdn_linq_samples
                         projectionsOperators.RunProjectionsOperators();
                         break;
                     default:
-                        Console.WriteLine("No such choice in the list\n");
+                        Console.WriteLine(cki.Key == ConsoleKey.Escape
+                            ? "\nQuitting ..."
+                            : "\nNo such choice in the list\n");
                         break;
                 }
             } while (cki.Key != ConsoleKey.Escape);
+            Console.ReadKey();
 
         }
     }

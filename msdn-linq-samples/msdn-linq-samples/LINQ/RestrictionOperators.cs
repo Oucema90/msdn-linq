@@ -49,11 +49,11 @@ namespace msdn_linq_samples.LINQ
 
         public void DisplayMenu()
         {
-            Console.WriteLine("Projections Operators");
+            Console.WriteLine("\nProjections Operators");
             Console.WriteLine();
             for (var i = 1; i <= 5; i++)
                 Console.WriteLine("{0}. Simple{1}", i, i);
-            Console.WriteLine("Esc. Exit");
+            Console.WriteLine("\nEsc. Exit");
         }
 
         #endregion
@@ -70,29 +70,31 @@ namespace msdn_linq_samples.LINQ
                 switch (cki.KeyChar.ToString())
                 {
                     case "1":
-                        Console.WriteLine("Numbers < 5:");
+                        Console.WriteLine("\nNumbers < 5:");
                         Display.Display.DisplayInts(Simple1());
                         break;
                     case "2":
-                        Console.WriteLine("Sold out products:");
+                        Console.WriteLine("\nSold out products:");
                         Display.Display.DisplayProducts(Simple2(),
                             cki.KeyChar.ToString());
                         break;
                     case "3":
-                        Console.WriteLine("In-stock products that cost more than 3.00:");
+                        Console.WriteLine("\nIn-stock products that cost more than 3.00:");
                         Display.Display.DisplayProducts(Simple3(),
                             cki.KeyChar.ToString());
                         break;
                     case "4":
-                        Console.WriteLine("Customers from Washington and their orders:");
+                        Console.WriteLine("\nCustomers from Washington and their orders:");
                         Display.Display.DisplayCustomers(Simple4());
                         break;
                     case "5":
-                        Console.WriteLine("Short digits:");
+                        Console.WriteLine("\nShort digits:");
                         Display.Display.DisplayStrings(Simple5());
                         break;
                     default:
-                        Console.WriteLine("No such choice in the list\n");
+                        Console.WriteLine(cki.Key == ConsoleKey.Escape
+                            ? "\nGoing back to Main Menu"
+                            : "\nNo such choice in the list\n");
                         break;
                 }
             } while (cki.Key != ConsoleKey.Escape);

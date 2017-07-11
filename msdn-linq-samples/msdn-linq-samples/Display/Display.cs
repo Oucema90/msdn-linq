@@ -47,22 +47,57 @@ namespace msdn_linq_samples.Display
 
         public static void DisplayAbs(IEnumerable<AB> aBs)
         {
+            foreach (var ab in aBs)
+            {
+                Console.WriteLine("{0} is less than {1}", ab.A, ab.B);
+            }
         }
 
         public static void DisplayDigitEvens(IEnumerable<DigitEven> digitEvens)
         {
+            foreach (var de in digitEvens)
+            {
+                Console.WriteLine("The digit {0} is {1}.", de.Digit, de.Even ? "even" : "odd");
+            }
         }
 
         public static void DisplayNumInPlaces(IEnumerable<NumInPlace> numInPlaces)
         {
+            foreach (var nip in numInPlaces)
+            {
+                Console.WriteLine("{0}: {1}", nip.Num, nip.InPlace);
+            }
         }
 
         public static void DisplayUpperLowers(IEnumerable<UpperLower> upperLowers)
         {
+            foreach (var ul in upperLowers)
+            {
+                Console.WriteLine("Uppercase: {0}, Lowercase: {1}", ul.Upper, ul.Lower);
+            }
         }
 
-        public static void DisplayCustomerOrders(IEnumerable<CustomerOrder> customerOrders)
+        public static void DisplayCustomerOrders(IEnumerable<CustomerOrder> customerOrders, int choice)
         {
+            foreach (var customerOrder in customerOrders)
+            {
+                switch (choice)
+                {
+                    case 15:
+                    case 17:
+                        Console.WriteLine("CustomerID={0} OrderId={1} Total={2}",customerOrder.CustomerId,customerOrder.OrderId,customerOrder.Total);
+                        break;
+                    case 16:
+                        Console.WriteLine("CustomerID={0} OrderId={1} OrderDate={2}",customerOrder.CustomerId,customerOrder.OrderId,customerOrder.Date);
+                        break;
+                    case 18:
+                        Console.WriteLine("CustomerID={0} OrderId={1}",customerOrder.CustomerId,customerOrder.OrderId);
+                        break;
+                    default:
+                        Console.WriteLine("\nNo such choice in the list");
+                        break;
+                }
+            }
         }
     }
 }

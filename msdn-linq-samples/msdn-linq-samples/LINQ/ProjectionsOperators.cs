@@ -114,82 +114,89 @@ namespace msdn_linq_samples.LINQ
 
         public void DisplayMenu()
         {
-            Console.WriteLine("Projections Operators");
+            Console.WriteLine("\nProjections Operators");
             Console.WriteLine();
             for (var i = 1; i <= 14; i++)
                 Console.WriteLine("{0}. Simple{1}", i, i + 5);
-            Console.WriteLine("Esc. Exit");
+            Console.WriteLine("\nEsc. Exit");
         }
 
         #endregion
 
         public void RunProjectionsOperators()
         {
-            ConsoleKeyInfo cki;
+            string cki;
 
             do
             {
                 DisplayMenu();
-                cki = Console.ReadKey(false);
+                cki = Console.ReadLine();
 
-                switch (cki.KeyChar.ToString())
+                switch (cki)
                 {
                     case "1":
-                        Console.WriteLine("Numbers + 1:");
+                        Console.WriteLine("\nNumbers + 1:");
                         Display.Display.DisplayInts(Simple6());
                         break;
                     case "2":
-                        Console.WriteLine("Product Names:");
+                        Console.WriteLine("\nProduct Names:");
                         Display.Display.DisplayStrings(Simple7());
                         break;
                     case "3":
-                        Console.WriteLine("Number strings:");
+                        Console.WriteLine("\nNumber strings:");
                         Display.Display.DisplayStrings(Simple8());
                         break;
                     case "4":
-                        Simple9();
+                        Console.WriteLine("\nUpper Lower:");
+                        Display.Display.DisplayUpperLowers(Simple9());
                         break;
-                    case "6":
+                    case "5":
+                        Console.WriteLine("\nDigit Even:");
                         Display.Display.DisplayDigitEvens(Simple10());
                         break;
-
-                    case "7":
-                        Console.WriteLine("Product Info:");
+                    case "6":
+                        Console.WriteLine("\nProduct Info:");
                         Display.Display.DisplayProducts(Simple11(), "2");
                         break;
-                    case "8":
-                        Console.WriteLine("Number: In-place?");
+                    case "7":
+                        Console.WriteLine("\nNumber: In-place?");
                         Display.Display.DisplayNumInPlaces(Simple12());
                         break;
-
-                    case "9":
-                        Console.WriteLine("Numbers < 5:");
+                    case "8":
+                        Console.WriteLine("\nNumbers < 5:");
                         Display.Display.DisplayStrings(Simple13());
                         break;
-                    case "10":
-                        Console.WriteLine("Pairs where a < b:");
+                    case "9":
+                        Console.WriteLine("\nPairs where a < b:");
                         Display.Display.DisplayAbs(Simple14());
                         break;
+                    case "10":
+                        Console.WriteLine("\nCustumer Orders Simple15:");
+                        Display.Display.DisplayCustomerOrders(Simple15(),15);
+                        break;
                     case "11":
-                        Display.Display.DisplayCustomerOrders(Simple15());
+                        Console.WriteLine("\nCustumer Orders Simple16:");
+                        Display.Display.DisplayCustomerOrders(Simple16(),16);
                         break;
                     case "12":
-                        Display.Display.DisplayCustomerOrders(Simple16());
+                        Console.WriteLine("\nCustumer Orders Simple17:");
+                        Display.Display.DisplayCustomerOrders(Simple17(),17);
                         break;
                     case "13":
-                        Display.Display.DisplayCustomerOrders(Simple17());
+                        Console.WriteLine("\nCustumer Orders Simple18:");
+                        Display.Display.DisplayCustomerOrders(Simple18(),18);
                         break;
                     case "14":
-                        Display.Display.DisplayCustomerOrders(Simple18());
-                        break;
-                    case "15":
+                        Console.WriteLine("\nCustumer Orders Simple19:");
                         Display.Display.DisplayStrings(Simple19());
                         break;
                     default:
-                        Console.WriteLine("No such choice in the list\n");
+                        Console.WriteLine(cki == "Esc"
+                            ? "\nGoing back to Main Menu"
+                            : "\nNo such choice in the list\n");
                         break;
                 }
-            } while (cki.Key != ConsoleKey.Escape);
+            } while (cki != "Esc");
         }
     }
 }
