@@ -4,14 +4,17 @@ namespace msdn_linq_samples.Entity
 {
     public class Order
     {
-        public long Id;
+        public long OrderId;
 
         public DateTime Date;
 
-        public Order(int id, DateTime date)
+        public decimal Total;
+
+        public Order(int orderId, DateTime date,decimal total)
         {
-            Id = id;
+            OrderId = orderId;
             Date = date;
+            Total = total;
         }
     }
 }

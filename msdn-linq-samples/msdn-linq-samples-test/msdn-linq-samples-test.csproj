@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="RestrictionOperatorsTests\ProjectionOperatorsTests.cs" />
     <Compile Include="RestrictionOperatorsTests\RestrictionOperatorsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

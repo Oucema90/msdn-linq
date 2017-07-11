@@ -16,5 +16,9 @@ namespace msdn_linq_samples.Entity
             UnitStock = unitStock;
             UnitPrice = unitPrice;
         }
+
+        public Product()
+        {
+        }
     }
 }
