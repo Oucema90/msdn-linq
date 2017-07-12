@@ -9,14 +9,14 @@ namespace msdn_linq_samples.Provider
     {
         public static IEnumerable<Customer> GetCustomersList()
         {
-            return new List<Customer>()
+            return new List<Customer>
             {
                 new Customer(1, "Lazy K Kountry Store", "WA", GetOrderList(1).ToList()),
                 new Customer(2, "Trail's Head Gourmet Provisioners", "WA", GetOrderList(2).ToList()),
                 new Customer(3, "White Clover Markets", "WA", GetOrderList(3).ToList()),
                 new Customer(4, "Haci Sait", "IS", GetOrderList(4).ToList()),
                 new Customer(5, "Baguette", "PA", GetOrderList(5).ToList()),
-                new Customer(6, "Meublatex", "TU", GetOrderList(6).ToList()),
+                new Customer(6, "Meublatex", "TU", GetOrderList(6).ToList())
             };
         }
 

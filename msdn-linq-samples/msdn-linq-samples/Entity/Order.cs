@@ -10,7 +10,7 @@ namespace msdn_linq_samples.Entity
 
         public decimal Total;
 
-        public Order(int orderId, DateTime date,decimal total)
+        public Order(int orderId, DateTime date, decimal total)
         {
             OrderId = orderId;
             Date = date;

@@ -5,7 +5,6 @@ namespace msdn_linq_samples
 {
     internal class Program
     {
-
         public void DisplayMenu()
         {
             Console.WriteLine("Program");
@@ -43,7 +42,6 @@ namespace msdn_linq_samples
                 }
             } while (cki.Key != ConsoleKey.Escape);
             Console.ReadKey();
-
         }
     }
 }

@@ -172,19 +172,19 @@ namespace msdn_linq_samples.LINQ
                         break;
                     case "10":
                         Console.WriteLine("\nCustumer Orders Simple15:");
-                        Display.Display.DisplayCustomerOrders(Simple15(),15);
+                        Display.Display.DisplayCustomerOrders(Simple15(), 15);
                         break;
                     case "11":
                         Console.WriteLine("\nCustumer Orders Simple16:");
-                        Display.Display.DisplayCustomerOrders(Simple16(),16);
+                        Display.Display.DisplayCustomerOrders(Simple16(), 16);
                         break;
                     case "12":
                         Console.WriteLine("\nCustumer Orders Simple17:");
-                        Display.Display.DisplayCustomerOrders(Simple17(),17);
+                        Display.Display.DisplayCustomerOrders(Simple17(), 17);
                         break;
                     case "13":
                         Console.WriteLine("\nCustumer Orders Simple18:");
-                        Display.Display.DisplayCustomerOrders(Simple18(),18);
+                        Display.Display.DisplayCustomerOrders(Simple18(), 18);
                         break;
                     case "14":
                         Console.WriteLine("\nCustumer Orders Simple19:");

@@ -14,6 +14,7 @@ namespace msdn_linq_samples_test.RestrictionOperatorsTests
         {
             _restrictionOperators = new RestrictionOperators();
         }
+
         [TestMethod]
         public void When_Linq1_Called_Should_Assert_true()
         {
@@ -25,7 +26,7 @@ namespace msdn_linq_samples_test.RestrictionOperatorsTests
         public void When_Linq1_Called_Should_Assert_false()
         {
             var result = _restrictionOperators.Simple1();
-            Assert.AreNotEqual(5,result.FirstOrDefault());
+            Assert.AreNotEqual(5, result.FirstOrDefault());
         }
 
         [TestMethod]

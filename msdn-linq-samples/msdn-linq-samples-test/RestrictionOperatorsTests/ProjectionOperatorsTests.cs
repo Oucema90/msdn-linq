@@ -221,7 +221,8 @@ namespace msdn_linq_samples_test.RestrictionOperatorsTests
         {
             var result = _projectionsOperators.Simple19();
             var firstOrDefault = result.FirstOrDefault();
-            Assert.AreNotEqual("The word Customer #1 has an order with OrderID 10482 is greater than its value.", firstOrDefault);
+            Assert.AreNotEqual("The word Customer #1 has an order with OrderID 10482 is greater than its value.",
+                firstOrDefault);
         }
     }
 }
