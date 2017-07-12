@@ -2,7 +2,7 @@
 using msdn_linq_samples.LINQ;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace msdn_linq_samples_test.RestrictionOperatorsTests
+namespace msdn_linq_samples_test.OperatorsTests
 {
     [TestClass]
     public class ProjectionOperatorsTests

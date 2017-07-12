@@ -69,5 +69,11 @@ namespace msdn_linq_samples.Provider
                     return new List<Order>();
             }
         }
+
+        public static IEnumerable<int> GetNumberList()
+        {
+            int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+            return numbers;
+        }
     }
 }
