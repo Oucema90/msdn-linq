@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using msdn_linq_samples.Entity;
-using msdn_linq_samples.Display;
 using msdn_linq_samples.Provider;
 
 namespace msdn_linq_samples.LINQ

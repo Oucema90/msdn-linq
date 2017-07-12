@@ -5,13 +5,13 @@ namespace msdn_linq_samples
 {
     internal class Program
     {
-
         public void DisplayMenu()
         {
             Console.WriteLine("Program");
             Console.WriteLine();
             Console.WriteLine("1. Restriction Operators");
             Console.WriteLine("2. Projections Operators");
+            Console.WriteLine("3. Projections Operators");
             Console.WriteLine("Esc. Exit");
         }
 
@@ -35,6 +35,10 @@ namespace msdn_linq_samples
                         var projectionsOperators = new ProjectionsOperators();
                         projectionsOperators.RunProjectionsOperators();
                         break;
+                    case "3":
+                        var partitioningOperators = new PartitioningOperators();
+                        partitioningOperators.RunPartitioningOperators();
+                        break;
                     default:
                         Console.WriteLine(cki.Key == ConsoleKey.Escape
                             ? "\nQuitting ..."
@@ -43,7 +47,6 @@ namespace msdn_linq_samples
                 }
             } while (cki.Key != ConsoleKey.Escape);
             Console.ReadKey();
-
         }
     }
 }
