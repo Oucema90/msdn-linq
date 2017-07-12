@@ -4,11 +4,13 @@ namespace msdn_linq_samples.Entity
 {
     public class Product
     {
-        public string Name;
+        public string Name { get; set; }
 
-        public int UnitStock;
+        public int UnitStock { get; set; }
 
-        public decimal UnitPrice;
+        public decimal UnitPrice { get; set; }
+
+        public string Category { get; set; }
 
         public Product(string name, int unitStock, decimal unitPrice)
         {
