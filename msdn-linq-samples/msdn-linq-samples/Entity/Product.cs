@@ -14,6 +14,8 @@ namespace msdn_linq_samples.Entity
 
         public string Category { get; set; }
 
+        public string Category { get; set; }
+
         public Product(string name, int unitStock, decimal unitPrice)
         {
             ProductName = name;
