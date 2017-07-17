@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace msdn_linq_samples.Anonymous_Types
 {
-    class YearMonthGroup
+    public class YearGroups
     {
+        public int Year { get; set; }
+
+        public IEnumerable<MonthGroups> MonthGrouping { get; set; }
     }
 }

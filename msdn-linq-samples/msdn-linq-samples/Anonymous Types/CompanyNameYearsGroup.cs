@@ -10,6 +10,6 @@ namespace msdn_linq_samples.Anonymous_Types
     {
         public string CompanyName { get; set; }
 
-        public IGrouping<string, YearMonthGroups> 
+        public IEnumerable<YearGroups> YearGrouping { get; set; }
     }
 }
