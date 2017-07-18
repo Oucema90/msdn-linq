@@ -88,7 +88,7 @@ namespace msdn_linq_samples.LINQ
                         break;
                     case "5":
                         Console.WriteLine("\nShort digits:");
-                        Display.Display.DisplayStrings(Simple5());
+                        Display.Display.DisplayStrings(Simple5(),2);
                         break;
                     default:
                         Console.WriteLine(cki.Key == ConsoleKey.Escape

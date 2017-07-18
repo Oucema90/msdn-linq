@@ -4,7 +4,9 @@ namespace msdn_linq_samples.Entity
 {
     public class Product
     {
-        public string Name { get; set; }
+        public long ProductId { get; set; }
+
+        public string ProductName { get; set; }
 
         public int UnitStock { get; set; }
 
@@ -14,13 +16,18 @@ namespace msdn_linq_samples.Entity
 
         public Product(string name, int unitStock, decimal unitPrice)
         {
-            Name = name;
+            ProductName = name;
             UnitStock = unitStock;
             UnitPrice = unitPrice;
         }
 
         public Product()
         {
+        }
+
+        public override string ToString()
+        {
+            return $"ProductID={ProductId} ProductName={ProductName} Category={Category} UnitPrice={UnitPrice} UnitsInStock={UnitStock}";
         }
     }
 }

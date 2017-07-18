@@ -12,10 +12,16 @@ namespace msdn_linq_samples.Display
             foreach (var element in ints) Console.WriteLine(element);
         }
 
-        public static void DisplayStrings(IEnumerable<string> strings)
+        public static void DisplayStrings(IEnumerable<string> strings, int value)
         {
-            foreach (var d in strings)
-                Console.WriteLine("The word {0} is shorter than its value.", d);
+            if(value == 1)
+                foreach (var d in strings)
+                    Console.WriteLine(d);
+            else
+            {
+                foreach (var d in strings)
+                    Console.WriteLine("The word {0} is shorter than its value.", d);
+            }
         }
 
         public static void DisplayProducts(IEnumerable<Product> products, string sample)
@@ -23,11 +29,16 @@ namespace msdn_linq_samples.Display
             switch (sample)
             {
                 case "2":
-                    foreach (var product in products) Console.WriteLine("{0} is sold out!", product.Name);
+                    foreach (var product in products)
+                        Console.WriteLine("{0} is sold out!", product.ProductName);
                     break;
                 case "3":
                     foreach (var product in products)
-                        Console.WriteLine("{0} is in stock and costs more than 3.00.", product.Name);
+                        Console.WriteLine("{0} is in stock and costs more than 3.00.", product.ProductName);
+                    break;
+                case "4":
+                    foreach (var product in products)
+                        Console.WriteLine(product.ToString());
                     break;
                 default:
                     Console.WriteLine("The sample {0} isns't a product sample", sample);
@@ -91,6 +102,14 @@ namespace msdn_linq_samples.Display
                         Console.WriteLine("\nNo such choice in the list");
                         break;
                 }
+        }
+
+        public static void DisplayDoubles(IEnumerable<double> doubles)
+        {
+            foreach (var d in doubles)
+            {
+                Console.WriteLine(d);
+            }
         }
     }
 }

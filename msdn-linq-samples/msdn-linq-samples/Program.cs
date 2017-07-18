@@ -12,6 +12,7 @@ namespace msdn_linq_samples
             Console.WriteLine("1. Restriction Operators");
             Console.WriteLine("2. Projections Operators");
             Console.WriteLine("3. Projections Operators");
+            Console.WriteLine("4. Ordering Operators");
             Console.WriteLine("Esc. Exit");
         }
 
@@ -38,6 +39,10 @@ namespace msdn_linq_samples
                     case "3":
                         var partitioningOperators = new PartitioningOperators();
                         partitioningOperators.RunPartitioningOperators();
+                        break;
+                    case "4":
+                        var orderingOperators = new OrderingOperators();
+                        orderingOperators.RunOrderingOperators();
                         break;
                     default:
                         Console.WriteLine(cki.Key == ConsoleKey.Escape
