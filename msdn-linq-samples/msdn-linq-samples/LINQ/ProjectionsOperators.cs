@@ -20,7 +20,7 @@ namespace msdn_linq_samples.LINQ
         public IEnumerable<string> Simple7()
         {
             var products = DataProvider.GetProductList();
-            return products.Select(x => x.Name);
+            return products.Select(x => x.ProductName);
         }
 
         public IEnumerable<string> Simple8()
@@ -46,7 +46,7 @@ namespace msdn_linq_samples.LINQ
         public IEnumerable<Product> Simple11()
         {
             var products = DataProvider.GetProductList();
-            return products.Select(x => new Product {Name = x.Name, UnitPrice = x.UnitPrice});
+            return products.Select(x => new Product {ProductName = x.ProductName, UnitPrice = x.UnitPrice});
         }
 
         public IEnumerable<NumInPlace> Simple12()
@@ -140,11 +140,11 @@ namespace msdn_linq_samples.LINQ
                         break;
                     case "2":
                         Console.WriteLine("\nProduct Names:");
-                        Display.Display.DisplayStrings(Simple7());
+                        Display.Display.DisplayStrings(Simple7(),1);
                         break;
                     case "3":
                         Console.WriteLine("\nNumber strings:");
-                        Display.Display.DisplayStrings(Simple8());
+                        Display.Display.DisplayStrings(Simple8(),1);
                         break;
                     case "4":
                         Console.WriteLine("\nUpper Lower:");
@@ -164,7 +164,7 @@ namespace msdn_linq_samples.LINQ
                         break;
                     case "8":
                         Console.WriteLine("\nNumbers < 5:");
-                        Display.Display.DisplayStrings(Simple13());
+                        Display.Display.DisplayStrings(Simple13(),1);
                         break;
                     case "9":
                         Console.WriteLine("\nPairs where a < b:");
@@ -188,7 +188,7 @@ namespace msdn_linq_samples.LINQ
                         break;
                     case "14":
                         Console.WriteLine("\nCustumer Orders Simple19:");
-                        Display.Display.DisplayStrings(Simple19());
+                        Display.Display.DisplayStrings(Simple19(),1);
                         break;
                     default:
                         Console.WriteLine(cki == "Esc"

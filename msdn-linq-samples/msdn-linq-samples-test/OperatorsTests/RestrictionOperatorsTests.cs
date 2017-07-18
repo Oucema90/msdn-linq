@@ -56,7 +56,7 @@ namespace msdn_linq_samples_test.OperatorsTests
             var result = _restrictionOperators.Simple3();
             var firstOrDefault = result.FirstOrDefault();
             if (firstOrDefault != null)
-                Assert.AreNotEqual("Chef Anton\'s Gumbo Mix", firstOrDefault.Name);
+                Assert.AreNotEqual("Chef Anton\'s Gumbo Mix", firstOrDefault.ProductName);
         }
 
         [TestMethod]

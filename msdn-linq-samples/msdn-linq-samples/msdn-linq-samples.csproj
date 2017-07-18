@@ -48,7 +48,9 @@
     <Compile Include="Anonymous Types\DigitEven.cs" />
     <Compile Include="Anonymous Types\NumInPlace.cs" />
     <Compile Include="Anonymous Types\UpperLower.cs" />
+    <Compile Include="CaseInsensitiveComparer.cs" />
     <Compile Include="Display\Display.cs" />
+    <Compile Include="LINQ\OrderingOperators.cs" />
     <Compile Include="LINQ\PartitioningOperators.cs" />
     <Compile Include="LINQ\ProjectionsOperators.cs" />
     <Compile Include="Provider\DataProvider.cs" />
