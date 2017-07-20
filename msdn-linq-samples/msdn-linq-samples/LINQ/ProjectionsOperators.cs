@@ -81,8 +81,8 @@ namespace msdn_linq_samples.LINQ
         {
             var customers = DataProvider.GetCustomersList();
             return customers.SelectMany(x => x.Orders, (c, o) => new {c, o})
-                .Where(x => x.o.Date > new DateTime(1998, 1, 1))
-                .Select(x => new CustomerOrder {CustomerId = x.c.CustomerId, OrderId = x.o.OrderId, Date = x.o.Date});
+                .Where(x => x.o.OrderDate > new DateTime(1998, 1, 1))
+                .Select(x => new CustomerOrder {CustomerId = x.c.CustomerId, OrderId = x.o.OrderId, Date = x.o.OrderDate });
         }
 
         public IEnumerable<CustomerOrder> Simple17()
@@ -97,7 +97,7 @@ namespace msdn_linq_samples.LINQ
             var customers = DataProvider.GetCustomersList();
             var cutoffDate = new DateTime(1997, 1, 1);
             return customers.Where(x => x.Region == "WA").SelectMany(x => x.Orders, (c, o) => new {c, o})
-                .Where(x => x.o.Date >= cutoffDate)
+                .Where(x => x.o.OrderDate >= cutoffDate)
                 .Select(x => new CustomerOrder {CustomerId = x.c.CustomerId, OrderId = x.o.OrderId});
         }
 

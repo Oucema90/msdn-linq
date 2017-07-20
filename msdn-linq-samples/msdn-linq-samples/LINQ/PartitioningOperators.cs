@@ -20,7 +20,7 @@ namespace msdn_linq_samples.LINQ
         {
             var customers = DataProvider.GetCustomersList();
             return customers.SelectMany(x => x.Orders, (c, o) => new {c, o}).Where(x => x.c.Region == "WA")
-                .Select(x => new CustomerOrder {CustomerId = x.c.CustomerId, OrderId = x.o.OrderId, Date = x.o.Date})
+                .Select(x => new CustomerOrder {CustomerId = x.c.CustomerId, OrderId = x.o.OrderId, Date = x.o.OrderDate})
                 .Take(3);
         }
 
@@ -34,7 +34,7 @@ namespace msdn_linq_samples.LINQ
         {
             var customers = DataProvider.GetCustomersList();
             return customers.SelectMany(x => x.Orders, (c, o) => new {c, o})
-                .Select(x => new CustomerOrder {CustomerId = x.c.CustomerId, OrderId = x.o.OrderId, Date = x.o.Date})
+                .Select(x => new CustomerOrder {CustomerId = x.c.CustomerId, OrderId = x.o.OrderId, Date = x.o.OrderDate })
                 .Skip(2);
         }
 

@@ -14,13 +14,12 @@ namespace msdn_linq_samples.Entity
 
         public string Category { get; set; }
 
-        public string Category { get; set; }
-
-        public Product(string name, int unitStock, decimal unitPrice)
+        public Product(string name, int unitStock, decimal unitPrice,string category)
         {
             ProductName = name;
             UnitStock = unitStock;
             UnitPrice = unitPrice;
+            Category = category;
         }
 
         public Product()

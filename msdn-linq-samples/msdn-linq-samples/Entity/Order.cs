@@ -6,15 +6,20 @@ namespace msdn_linq_samples.Entity
     {
         public long OrderId;
 
-        public DateTime Date;
+        public DateTime OrderDate;
 
         public decimal Total;
 
         public Order(int orderId, DateTime date, decimal total)
         {
             OrderId = orderId;
-            Date = date;
+            OrderDate = date;
             Total = total;
+        }
+
+        public override string ToString()
+        {
+            return $"OrderId={OrderId} Order Date={OrderDate} Total={Total}";
         }
     }
 }

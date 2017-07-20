@@ -38,10 +38,10 @@ namespace msdn_linq_samples.LINQ
             return customers.Select(c => new CompanyNameYearsGroup
             {
                 CompanyName = c.CompanyName,
-                YearGrouping = c.Orders.GroupBy(o => o.Date.Year).Select(yg => new YearGroups
+                YearGrouping = c.Orders.GroupBy(o => o.OrderDate.Year).Select(yg => new YearGroups
                 {
                     Year = yg.Key,
-                    MonthGrouping = yg.GroupBy(o => o.Date.Month).Select(mg => new MonthGroups
+                    MonthGrouping = yg.GroupBy(o => o.OrderDate.Month).Select(mg => new MonthGroups
                     {
                         Month = mg.Key,
                         Orders = mg
@@ -67,7 +67,59 @@ namespace msdn_linq_samples.LINQ
 
         #region Displays
 
+        public void DisplayMenu()
+        {
+            Console.WriteLine("\nGrouping Operators");
+            Console.WriteLine();
+            for (var i = 1; i <= 6; i++)
+                Console.WriteLine("{0}. Simple{1}", i, i + 39);
+            Console.WriteLine("\nEsc. Exit");
+        }
 
         #endregion
+
+        public void RunGroupingOperators()
+        {
+            ConsoleKeyInfo cki;
+
+            do
+            {
+                DisplayMenu();
+                cki = Console.ReadKey(false);
+
+                switch (cki.KeyChar.ToString())
+                {
+                    case "1":
+                        Console.WriteLine("\nModulo 5 grouing:");
+                        Display.Display.DisplayRemainderNumbers(Simple40());
+                        break;
+                    case "2":
+                        Console.WriteLine("\nFirst letter grouping:");
+                        Display.Display.DisplayFirstLetterWords(Simple41());
+                        break;
+                    case "3":
+                        Console.WriteLine("\nCategory products grouping:");
+                        Display.Display.DisplayCategoryProducts(Simple42());
+                        break;
+                    case "4":
+                        Console.WriteLine("\nCompany products grouping:");
+                        Display.Display.DisplayCompnayNameYearsGroups(Simple43());
+                        break;
+                    case "5":
+                        Console.WriteLine("\nAnagram grouping:");
+                        Display.Display.DisplayGroupingStringString(Simple44());
+                        break;
+                    case "6":
+                        Console.WriteLine("\nAnagram grouping:");
+                        Display.Display.DisplayGroupingStringString(Simple45());
+                        break;
+                    default:
+                        Console.WriteLine(cki.Key == ConsoleKey.Escape
+                            ? "\nGoing back to Main Menu"
+                            : "\nNo such choice in the list\n");
+                        break;
+                }
+            } while (cki.Key != ConsoleKey.Escape);
+        }
     }
 }

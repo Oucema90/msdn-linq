@@ -53,11 +53,10 @@
     <Compile Include="Anonymous Types\NumInPlace.cs" />
     <Compile Include="Anonymous Types\RemainderNumbers.cs" />
     <Compile Include="Anonymous Types\UpperLower.cs" />
-    <Compile Include="CaseInsensitiveComparer.cs" />
+    <Compile Include="Utıils\CaseInsensitiveComparer.cs" />
     <Compile Include="Display\Display.cs" />
     <Compile Include="LINQ\OrderingOperators.cs" />
     <Compile Include="Anonymous Types\YearGroups.cs" />
-    <Compile Include="Display\Display.cs" />
     <Compile Include="LINQ\GroupingOperators.cs" />
     <Compile Include="LINQ\PartitioningOperators.cs" />
     <Compile Include="LINQ\ProjectionsOperators.cs" />
