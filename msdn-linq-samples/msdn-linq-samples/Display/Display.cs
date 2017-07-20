@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting;
 using msdn_linq_samples.Anonymous_Types;
 using msdn_linq_samples.Entity;
 
@@ -52,7 +54,7 @@ namespace msdn_linq_samples.Display
             {
                 Console.WriteLine("Customer {0}: {1}", customer.CustomerId, customer.CompanyName);
                 foreach (var order in customer.Orders)
-                    Console.WriteLine("  Order {0}: {1}", order.OrderId, order.Date);
+                    Console.WriteLine("  Order {0}: {1}", order.OrderId, order.OrderDate);
             }
         }
 
@@ -109,6 +111,74 @@ namespace msdn_linq_samples.Display
             foreach (var d in doubles)
             {
                 Console.WriteLine(d);
+            }
+        }
+
+        public static void DisplayRemainderNumbers(IEnumerable<RemainderNumbers> reminderNumbers)
+        {
+            foreach (var reminderNumber in reminderNumbers)
+            {
+                Console.WriteLine("Numbers with a remainder of {0} when divided by 5:", reminderNumber.Remainder);
+                foreach (var number in reminderNumber.Numbers)
+                {
+                    Console.WriteLine(number);
+                }
+            }
+        }
+
+        public static void DisplayFirstLetterWords(IEnumerable<FirstLetterWords> firstLetterWords)
+        {
+            foreach (var firstLetterWord in firstLetterWords)
+            {
+                Console.WriteLine("Words that start with the letter '{0}':", firstLetterWord.FirstLetter);
+                foreach (var word in firstLetterWord.Words)
+                {
+                    Console.WriteLine(word);
+                }
+            }
+        }
+
+        public static void DisplayCategoryProducts(IEnumerable<CategoryProducts> categoryProducts)
+        {
+            foreach (var categoryProduct in categoryProducts)
+            {
+                Console.WriteLine("Category={0}=...",categoryProduct.Category);
+                foreach (var product in categoryProduct.Products)
+                {
+                    Console.WriteLine(product.ToString());
+                }
+            }
+        }
+
+        public static void DisplayCompnayNameYearsGroups(IEnumerable<CompanyNameYearsGroup> compnayNameYearsGroups)
+        {
+            foreach (var compnayNameYearsGroup in compnayNameYearsGroups)
+            {
+                Console.WriteLine("Company Name={0} ...", compnayNameYearsGroup.CompanyName);
+                foreach (var yearGrouping in compnayNameYearsGroup.YearGrouping)
+                {
+                    Console.WriteLine("YearGroups={0}", yearGrouping.Year);
+                    foreach (var monthGrouping in yearGrouping.MonthGrouping)
+                    {
+                        Console.WriteLine("MonthGroups={0}", monthGrouping.Month);
+                        foreach (var order in monthGrouping.Orders)
+                        {
+                            Console.WriteLine(order.ToString());
+                        }
+                    }
+                }
+            }
+        }
+
+        public static void DisplayGroupingStringString(IEnumerable<IGrouping<string, string>> stringStringGrouping)
+        {
+            foreach (var group in stringStringGrouping)
+            {
+                Console.WriteLine("...");
+                foreach (var g in group)
+                {
+                    Console.WriteLine(g);
+                }
             }
         }
     }
