@@ -181,5 +181,13 @@ namespace msdn_linq_samples.Display
                 }
             }
         }
+
+        public static void DisplayChars(IEnumerable<char> chars)
+        {
+            foreach (var c in chars)
+            {
+                Console.WriteLine(c);
+            }
+        }
     }
 }
