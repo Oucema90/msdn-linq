@@ -52,7 +52,9 @@
     <Compile Include="Anonymous Types\MonthGroups.cs" />
     <Compile Include="Anonymous Types\NumInPlace.cs" />
     <Compile Include="Anonymous Types\RemainderNumbers.cs" />
+    <Compile Include="Anonymous Types\ScoreRecord.cs" />
     <Compile Include="Anonymous Types\UpperLower.cs" />
+    <Compile Include="LINQ\ConversionOperators.cs" />
     <Compile Include="LINQ\SetOperators.cs" />
     <Compile Include="Utıils\CaseInsensitiveComparer.cs" />
     <Compile Include="Display\Display.cs" />

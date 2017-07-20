@@ -15,6 +15,7 @@ namespace msdn_linq_samples
             Console.WriteLine("4. Ordering Operators");
             Console.WriteLine("5. Grouping Operators");
             Console.WriteLine("6. Sets Operators");
+            Console.WriteLine("7. Conversions Operators");
             Console.WriteLine("Esc. Exit");
         }
 
@@ -53,6 +54,10 @@ namespace msdn_linq_samples
                     case "6":
                         var setsOperators = new SetsOperators();
                         setsOperators.RunSetsOperators();
+                        break;
+                    case "7":
+                        var conversionsOperators = new ConversionOperators();
+                        conversionsOperators.RunConversionsOperators();
                         break;
                     default:
                         Console.WriteLine(cki.Key == ConsoleKey.Escape
