@@ -44,13 +44,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anonymous Types\AB.cs" />
+    <Compile Include="Anonymous Types\CategoryProducts.cs" />
+    <Compile Include="Anonymous Types\CompanyNameYearsGroup.cs" />
     <Compile Include="Anonymous Types\CustomerOrder.cs" />
     <Compile Include="Anonymous Types\DigitEven.cs" />
+    <Compile Include="Anonymous Types\FirstLetterWords.cs" />
+    <Compile Include="Anonymous Types\MonthGroups.cs" />
     <Compile Include="Anonymous Types\NumInPlace.cs" />
+    <Compile Include="Anonymous Types\RemainderNumbers.cs" />
     <Compile Include="Anonymous Types\UpperLower.cs" />
-    <Compile Include="CaseInsensitiveComparer.cs" />
+    <Compile Include="Utıils\CaseInsensitiveComparer.cs" />
     <Compile Include="Display\Display.cs" />
     <Compile Include="LINQ\OrderingOperators.cs" />
+    <Compile Include="Anonymous Types\YearGroups.cs" />
+    <Compile Include="LINQ\GroupingOperators.cs" />
     <Compile Include="LINQ\PartitioningOperators.cs" />
     <Compile Include="LINQ\ProjectionsOperators.cs" />
     <Compile Include="Provider\DataProvider.cs" />
@@ -60,10 +67,12 @@
     <Compile Include="LINQ\RestrictionOperators.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utıils\AnagramEqualityComparer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
