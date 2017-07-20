@@ -189,5 +189,13 @@ namespace msdn_linq_samples.Display
                 Console.WriteLine(c);
             }
         }
+
+        public static void DisplayScoreRecords(IDictionary<string,ScoreRecord> scoreRecords)
+        {
+            foreach (var scoreRecord in scoreRecords)
+            {
+                Console.WriteLine($"Name:{scoreRecord.Key} | Score:{scoreRecord.Value.Score}");
+            }
+        }
     }
 }
