@@ -17,6 +17,7 @@ namespace msdn_linq_samples
             Console.WriteLine("6. Sets Operators");
             Console.WriteLine("7. Conversions Operators");
             Console.WriteLine("8. Elements Operators");
+            Console.WriteLine("9. Generations Operators");
             Console.WriteLine("Esc. Exit");
         }
 
@@ -61,8 +62,12 @@ namespace msdn_linq_samples
                         conversionsOperators.RunConversionsOperators();
                         break;
                     case "8":
-                        var elementssOperators = new ElementOperators();
-                        elementssOperators.RunElementsOperators();
+                        var elementsOperators = new ElementOperators();
+                        elementsOperators.RunElementsOperators();
+                        break;
+                    case "9":
+                        var generationsOperators = new GenerationOperators();
+                        generationsOperators.RunGenerationsOperations();
                         break;
                     default:
                         Console.WriteLine(cki.Key == ConsoleKey.Escape
