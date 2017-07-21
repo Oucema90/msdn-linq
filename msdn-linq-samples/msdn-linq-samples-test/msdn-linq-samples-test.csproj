@@ -60,6 +60,7 @@
     <Compile Include="OperatorsTests\ProjectionOperatorsTests.cs" />
     <Compile Include="OperatorsTests\RestrictionOperatorsTests.cs" />
     <Compile Include="OperatorsTests\SetOperatorsTests.cs" />
+    <Compile Include="OperatorsTests\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
