@@ -145,7 +145,7 @@ namespace msdn_linq_samples_test.OperatorsTests
         public void When_Linq37_Called_Should_Assert_true()
         {
             var result = _orderingOperators.Simple37();
-            Assert.AreEqual(result.FirstOrDefault().ProductName, "Mishi Kobe Niku");
+            Assert.AreEqual(result.FirstOrDefault().ProductName, "Thringer");
         }
 
         [TestMethod]
