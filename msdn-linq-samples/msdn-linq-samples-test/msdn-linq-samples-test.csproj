@@ -58,9 +58,10 @@
     <Compile Include="OperatorsTests\OrderingOperatorsTests.cs" />
     <Compile Include="OperatorsTests\PartitioningOperatorsTests.cs" />
     <Compile Include="OperatorsTests\ProjectionOperatorsTests.cs" />
+    <Compile Include="OperatorsTests\QuantifiersOperatorsTests.cs" />
     <Compile Include="OperatorsTests\RestrictionOperatorsTests.cs" />
     <Compile Include="OperatorsTests\SetOperatorsTests.cs" />
-    <Compile Include="OperatorsTests\UnitTest1.cs" />
+    <Compile Include="OperatorsTests\GenerationOperatorsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
