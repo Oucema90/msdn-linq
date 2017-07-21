@@ -18,6 +18,7 @@ namespace msdn_linq_samples
             Console.WriteLine("7. Conversions Operators");
             Console.WriteLine("8. Elements Operators");
             Console.WriteLine("9. Generations Operators");
+            Console.WriteLine("10. Quantifiers Operators");
             Console.WriteLine("Esc. Exit");
         }
 
@@ -25,13 +26,13 @@ namespace msdn_linq_samples
         {
             var program = new Program();
 
-            ConsoleKeyInfo cki;
+            string cki;
 
             do
             {
                 program.DisplayMenu();
-                cki = Console.ReadKey(false);
-                switch (cki.KeyChar.ToString())
+                cki = Console.ReadLine();
+                switch (cki)
                 {
                     case "1":
                         var restrictionOperators = new RestrictionOperators();
@@ -69,13 +70,17 @@ namespace msdn_linq_samples
                         var generationsOperators = new GenerationOperators();
                         generationsOperators.RunGenerationsOperations();
                         break;
+                    case "10":
+                        var quantifiersOperators = new QuantifierOperators();
+                        quantifiersOperators.RunQuantifiersOperators();
+                        break;
                     default:
-                        Console.WriteLine(cki.Key == ConsoleKey.Escape
+                        Console.WriteLine(cki == "Esc"
                             ? "\nQuitting ..."
                             : "\nNo such choice in the list\n");
                         break;
                 }
-            } while (cki.Key != ConsoleKey.Escape);
+            } while (cki != "Esc");
             Console.ReadKey();
         }
     }
