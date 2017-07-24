@@ -47,6 +47,7 @@
     <Compile Include="Anonymous Types\CategoryProducts.cs" />
     <Compile Include="Anonymous Types\CompanyNameYearsGroup.cs" />
     <Compile Include="Anonymous Types\CustomerOrder.cs" />
+    <Compile Include="Anonymous Types\CustomerOrderCount.cs" />
     <Compile Include="Anonymous Types\DigitEven.cs" />
     <Compile Include="Anonymous Types\FirstLetterWords.cs" />
     <Compile Include="Anonymous Types\MonthGroups.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Anonymous Types\RemainderNumbers.cs" />
     <Compile Include="Anonymous Types\ScoreRecord.cs" />
     <Compile Include="Anonymous Types\UpperLower.cs" />
+    <Compile Include="LINQ\AggregateOperators.cs" />
     <Compile Include="LINQ\ConversionOperators.cs" />
     <Compile Include="LINQ\ElementOperators.cs" />
     <Compile Include="LINQ\GenerationOperators.cs" />
