@@ -71,7 +71,7 @@ namespace msdn_linq_samples.LINQ
                         break;
                     case "2":
                         Console.WriteLine("\nOne for each category product out of stock:");
-                        Display.Display.DisplayCategoryProducts(Simple69());
+                        Display.Display.DisplayCategoryProducts(Simple69(),-1);
                         break;
                     case "3":
                         Console.WriteLine("\nThe list contains only odd numbers:");
@@ -79,7 +79,7 @@ namespace msdn_linq_samples.LINQ
                         break;
                     case "4":
                         Console.WriteLine("\nAll for each category product in stock:");
-                        Display.Display.DisplayCategoryProducts(Simple72());
+                        Display.Display.DisplayCategoryProducts(Simple72(),-1);
                         break;
                     default:
                         Console.WriteLine(cki.Key == ConsoleKey.Escape
