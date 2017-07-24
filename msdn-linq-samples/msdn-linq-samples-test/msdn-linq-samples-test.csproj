@@ -52,13 +52,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="OperatorsTests\AggregateOperatorsTests.cs" />
     <Compile Include="OperatorsTests\ConversionOperatorsTests.cs" />
     <Compile Include="OperatorsTests\ElementOperatorsTests.cs" />
     <Compile Include="OperatorsTests\GroupingOperatorsTests.cs" />
     <Compile Include="OperatorsTests\OrderingOperatorsTests.cs" />
     <Compile Include="OperatorsTests\PartitioningOperatorsTests.cs" />
     <Compile Include="OperatorsTests\ProjectionOperatorsTests.cs" />
-    <Compile Include="OperatorsTests\QuantifiersOperatorsTests.cs" />
+    <Compile Include="OperatorsTests\QuantifierOperatorsTests.cs" />
     <Compile Include="OperatorsTests\RestrictionOperatorsTests.cs" />
     <Compile Include="OperatorsTests\SetOperatorsTests.cs" />
     <Compile Include="OperatorsTests\GenerationOperatorsTests.cs" />
