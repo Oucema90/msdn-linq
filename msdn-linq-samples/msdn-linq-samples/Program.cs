@@ -20,6 +20,7 @@ namespace msdn_linq_samples
             Console.WriteLine("9. Generations Operators");
             Console.WriteLine("10. Quantifiers Operators");
             Console.WriteLine("11. Quantifiers Operators");
+            Console.WriteLine("12. Miscellaneous Operators");
             Console.WriteLine("Esc. Exit");
         }
 
@@ -78,6 +79,10 @@ namespace msdn_linq_samples
                     case "11":
                         var aggregatesOperators = new AggregateOperators();
                         aggregatesOperators.RunAggregatesOperators();
+                        break;
+                    case "12":
+                        var miscellaneousOperators = new MiscellaneousOperators();
+                        miscellaneousOperators.RunMiscellaneousOperators();
                         break;
                     default:
                         Console.WriteLine(cki == "Esc"
