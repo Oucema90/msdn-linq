@@ -64,6 +64,7 @@
     <Compile Include="OperatorsTests\RestrictionOperatorsTests.cs" />
     <Compile Include="OperatorsTests\SetOperatorsTests.cs" />
     <Compile Include="OperatorsTests\GenerationOperatorsTests.cs" />
+    <Compile Include="OperatorsTests\QueryExecutionOperatorsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

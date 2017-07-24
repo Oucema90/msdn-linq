@@ -61,6 +61,7 @@
     <Compile Include="LINQ\GenerationOperators.cs" />
     <Compile Include="LINQ\MiscellaneousOperators.cs" />
     <Compile Include="LINQ\QuantifierOperators.cs" />
+    <Compile Include="LINQ\QueryExecutionOperators.cs" />
     <Compile Include="LINQ\SetOperators.cs" />
     <Compile Include="Utıils\CaseInsensitiveComparer.cs" />
     <Compile Include="Display\Display.cs" />

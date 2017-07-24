@@ -21,6 +21,7 @@ namespace msdn_linq_samples
             Console.WriteLine("10. Quantifiers Operators");
             Console.WriteLine("11. Quantifiers Operators");
             Console.WriteLine("12. Miscellaneous Operators");
+            Console.WriteLine("13. Query Execution Operators");
             Console.WriteLine("Esc. Exit");
         }
 
@@ -83,6 +84,10 @@ namespace msdn_linq_samples
                     case "12":
                         var miscellaneousOperators = new MiscellaneousOperators();
                         miscellaneousOperators.RunMiscellaneousOperators();
+                        break;
+                    case "13":
+                        var queryExecutionOperators = new QueryExecutionOperators();
+                        queryExecutionOperators.RunQueryExecutionsOperators();
                         break;
                     default:
                         Console.WriteLine(cki == "Esc"
