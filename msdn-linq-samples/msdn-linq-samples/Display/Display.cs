@@ -138,15 +138,50 @@ namespace msdn_linq_samples.Display
             }
         }
 
-        public static void DisplayCategoryProducts(IEnumerable<CategoryProducts> categoryProducts)
+        public static void DisplayCategoryProducts(IEnumerable<CategoryProducts> categoryProducts,int value)
         {
             foreach (var categoryProduct in categoryProducts)
             {
-                Console.WriteLine("Category={0}=...",categoryProduct.Category);
-                foreach (var product in categoryProduct.Products)
+                Console.WriteLine($"Category =   {categoryProduct.Category}");
+                switch (value)
                 {
-                    Console.WriteLine(product.ToString());
+                    case 1:
+                        Console.WriteLine($"Total Products    =   {categoryProduct.ProductCount}");
+                        break;
+                    case 2:
+                        Console.WriteLine($"Total units in stock    = {categoryProduct.TotalUnitsInStock}");
+                        break;
+                    case 3:
+                        Console.WriteLine($"Cheapest price  =   {categoryProduct.CheapestPrice}");
+                        break;
+                    case 4:
+                        Console.WriteLine("Cheapest products");
+                        foreach (var product in categoryProduct.CheapestProducts)
+                        {
+                            Console.WriteLine(product.ToString());
+                        }
+                        break;
+                    case 5:
+                        Console.WriteLine($"Most expensive price  =   {categoryProduct.MostExpensivePrice}");
+                        break;
+                    case 6:
+                        Console.WriteLine("Most expensive products");
+                        foreach (var product in categoryProduct.MostExpensiveProducts)
+                        {
+                            Console.WriteLine(product.ToString());
+                        }
+                        break;
+                    case 7:
+                        Console.WriteLine($"Average price  =   {categoryProduct.AveragePrice}");
+                        break;
+                    default:
+                        foreach (var product in categoryProduct.Products)
+                        {
+                            Console.WriteLine(product.ToString());
+                        }
+                        break;
                 }
+                    
             }
         }
 
@@ -194,7 +229,15 @@ namespace msdn_linq_samples.Display
         {
             foreach (var scoreRecord in scoreRecords)
             {
-                Console.WriteLine($"Name:{scoreRecord.Key} | Score:{scoreRecord.Value.Score}");
+                Console.WriteLine($"Name:{scoreRecord.Key}  |   Score:{scoreRecord.Value.Score}");
+            }
+        }
+
+        public static void DisplayCustomerOrderCount(IEnumerable<CustomerOrderCount> customerOrderCounts)
+        {
+            foreach (var customerOrderCount in customerOrderCounts)
+            {
+                Console.WriteLine($"CustomerID={customerOrderCount.CustomerId}  |   OrderCount={customerOrderCount.OrderCount}");
             }
         }
     }

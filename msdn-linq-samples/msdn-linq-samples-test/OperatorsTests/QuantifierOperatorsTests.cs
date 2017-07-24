@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace msdn_linq_samples_test.OperatorsTests
 {
     [TestClass]
-    public class QuantifiersOperatorsTests
+    public class QuantifierOperatorsTests
     {
         public QuantifierOperators QuantifiersOperators { get; set; }
 

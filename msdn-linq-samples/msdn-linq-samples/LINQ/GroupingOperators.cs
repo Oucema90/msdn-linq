@@ -99,7 +99,7 @@ namespace msdn_linq_samples.LINQ
                         break;
                     case "3":
                         Console.WriteLine("\nCategory products grouping:");
-                        Display.Display.DisplayCategoryProducts(Simple42());
+                        Display.Display.DisplayCategoryProducts(Simple42(),-1);
                         break;
                     case "4":
                         Console.WriteLine("\nCompany products grouping:");
