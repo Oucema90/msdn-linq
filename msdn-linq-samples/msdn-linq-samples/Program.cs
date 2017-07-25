@@ -22,6 +22,7 @@ namespace msdn_linq_samples
             Console.WriteLine("11. Quantifiers Operators");
             Console.WriteLine("12. Miscellaneous Operators");
             Console.WriteLine("13. Query Execution Operators");
+            Console.WriteLine("14. Joins Operators");
             Console.WriteLine("Esc. Exit");
         }
 
@@ -88,6 +89,10 @@ namespace msdn_linq_samples
                     case "13":
                         var queryExecutionOperators = new QueryExecutionOperators();
                         queryExecutionOperators.RunQueryExecutionsOperators();
+                        break;
+                    case "14":
+                        var joinOperators = new JoinOperators();
+                        joinOperators.RunJoinsOperators();
                         break;
                     default:
                         Console.WriteLine(cki == "Esc"
