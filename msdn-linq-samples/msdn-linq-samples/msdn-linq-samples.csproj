@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anonymous Types\AB.cs" />
+    <Compile Include="Anonymous Types\CategoryProduct.cs" />
+    <Compile Include="Anonymous Types\CategoryProductGroup.cs" />
     <Compile Include="Anonymous Types\CategoryProducts.cs" />
     <Compile Include="Anonymous Types\CompanyNameYearsGroup.cs" />
     <Compile Include="Anonymous Types\CustomerOrder.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="LINQ\ConversionOperators.cs" />
     <Compile Include="LINQ\ElementOperators.cs" />
     <Compile Include="LINQ\GenerationOperators.cs" />
+    <Compile Include="LINQ\JoinOperators.cs" />
     <Compile Include="LINQ\MiscellaneousOperators.cs" />
     <Compile Include="LINQ\QuantifierOperators.cs" />
     <Compile Include="LINQ\QueryExecutionOperators.cs" />

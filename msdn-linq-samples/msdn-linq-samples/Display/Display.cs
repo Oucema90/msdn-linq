@@ -240,5 +240,22 @@ namespace msdn_linq_samples.Display
                 Console.WriteLine($"CustomerID={customerOrderCount.CustomerId}  |   OrderCount={customerOrderCount.OrderCount}");
             }
         }
+
+        public static void DisplayCategoryProduct(IEnumerable<CategoryProduct> categoriesProducts)
+        {
+            foreach (var categoryProduct in categoriesProducts)
+            {
+                Console.WriteLine($"Category    =   {categoryProduct.Category}  |   ProductName =   {categoryProduct.ProductName}");
+            }
+        }
+
+        public static void DisplayCategoryProductGroup(IEnumerable<CategoryProductGroup> categoryProductGroups)
+        {
+            foreach (var categoryProductGroup in categoryProductGroups)
+            {
+                Console.WriteLine(categoryProductGroup.Category);
+                DisplayProducts(categoryProductGroup.Products,"4");
+            }
+        }
     }
 }
