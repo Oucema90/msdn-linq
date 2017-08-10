@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Display\ProgamTests.cs" />
     <Compile Include="OperatorsTests\AggregateOperatorsTests.cs" />
     <Compile Include="OperatorsTests\ConversionOperatorsTests.cs" />
     <Compile Include="OperatorsTests\ElementOperatorsTests.cs" />
