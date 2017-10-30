@@ -1,4 +1,5 @@
 ﻿using System;
+using msdn_linq_samples.Display;
 using msdn_linq_samples.LINQ;
 
 namespace msdn_linq_samples
@@ -8,21 +9,7 @@ namespace msdn_linq_samples
         public void DisplayMenu()
         {
             Console.WriteLine("Program");
-            Console.WriteLine();
-            Console.WriteLine("1. Restriction Operators");
-            Console.WriteLine("2. Projections Operators");
-            Console.WriteLine("3. Projections Operators");
-            Console.WriteLine("4. Ordering Operators");
-            Console.WriteLine("5. Grouping Operators");
-            Console.WriteLine("6. Sets Operators");
-            Console.WriteLine("7. Conversions Operators");
-            Console.WriteLine("8. Elements Operators");
-            Console.WriteLine("9. Generations Operators");
-            Console.WriteLine("10. Quantifiers Operators");
-            Console.WriteLine("11. Quantifiers Operators");
-            Console.WriteLine("12. Miscellaneous Operators");
-            Console.WriteLine("13. Query Execution Operators");
-            Console.WriteLine("14. Joins Operators");
+            EnumsDisplay.DisplayProgramMenu();
             Console.WriteLine("Esc. Exit");
         }
 

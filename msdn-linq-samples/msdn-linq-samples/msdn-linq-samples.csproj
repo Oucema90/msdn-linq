@@ -57,6 +57,9 @@
     <Compile Include="Anonymous Types\RemainderNumbers.cs" />
     <Compile Include="Anonymous Types\ScoreRecord.cs" />
     <Compile Include="Anonymous Types\UpperLower.cs" />
+    <Compile Include="Attribute\ContractMetaAttribute.cs" />
+    <Compile Include="Display\EnumsDisplay.cs" />
+    <Compile Include="Enums\LinqOperators.cs" />
     <Compile Include="LINQ\AggregateOperators.cs" />
     <Compile Include="LINQ\ConversionOperators.cs" />
     <Compile Include="LINQ\ElementOperators.cs" />

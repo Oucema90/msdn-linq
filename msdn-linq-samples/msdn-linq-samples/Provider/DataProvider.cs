@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using msdn_linq_samples.Entity;
+using msdn_linq_samples.Enums;
 
 namespace msdn_linq_samples.Provider
 {
@@ -24,16 +25,16 @@ namespace msdn_linq_samples.Provider
         {
             return new List<Product>
             {
-                new Product("Chef Anton\'s Gumbo Mix", 0, 2M,"Food"),
-                new Product("Alice Mutton", 0, 7M,"Perfum"),
-                new Product("Thringer", 0, 6M,"Electronıc"),
-                new Product("Gorgonzola", 0, 3M,"Movie"),
-                new Product("Perth Pasties", 0, 1M,"Food"),
-                new Product("Chai", 3, 4M,"Perfum"),
-                new Product("Chang", 4, 5M,"Perfum"),
-                new Product("Aniseed Syrup", 3, 7M,"Medecine"),
-                new Product("Northwoods Cranberry Sauce", 2, 9M,"Food"),
-                new Product("Mishi Kobe Niku", 1, 11M,"Movie")
+                new Product("Chef Anton\'s Gumbo Mix", 0, 2M, "Food"),
+                new Product("Alice Mutton", 0, 7M, "Perfum"),
+                new Product("Thringer", 0, 6M, "Electronıc"),
+                new Product("Gorgonzola", 0, 3M, "Movie"),
+                new Product("Perth Pasties", 0, 1M, "Food"),
+                new Product("Chai", 3, 4M, "Perfum"),
+                new Product("Chang", 4, 5M, "Perfum"),
+                new Product("Aniseed Syrup", 3, 7M, "Medecine"),
+                new Product("Northwoods Cranberry Sauce", 2, 9M, "Food"),
+                new Product("Mishi Kobe Niku", 1, 11M, "Movie")
             };
         }
 
@@ -74,6 +75,27 @@ namespace msdn_linq_samples.Provider
         {
             int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
             return numbers;
+        }
+
+        public static IEnumerable<LinqOperators> GetLinqOperators()
+        {
+            return new List<LinqOperators>
+            {
+                LinqOperators.Restriction,
+                LinqOperators.Projection,
+                LinqOperators.Partition,
+                LinqOperators.Ordering,
+                LinqOperators.Grouping,
+                LinqOperators.Set,
+                LinqOperators.Conversion,
+                LinqOperators.Element,
+                LinqOperators.Generation,
+                LinqOperators.Quantifier,
+                LinqOperators.Aggregate,
+                LinqOperators.Miscellaneous,
+                LinqOperators.QueryExecution,
+                LinqOperators.Join
+            };
         }
     }
 }
